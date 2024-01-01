@@ -144,3 +144,72 @@
 // if(favMov == guess){
 //     console.log("Congrats..")
 // }
+
+// loops with arrays
+
+// let fruits =["apple", "banana", "orange", "mango"];
+
+// for( let i = 0; i<fruits.length; i ++){
+//     console.log(i, fruits[i]);
+// }
+
+// let msg = " I am Sorry";
+
+// for(let i = 0; i < 100; i ++){
+//     console.log(i, msg)
+// }
+
+
+// Nested Loop with Nested Arrays
+
+// let heroes = [
+//     ["ironman", "spiderman","thor"],
+//     ['superman', 'wonderwoman', 'flash']
+// ]
+
+// for(let i = 0; i < heroes.length; i ++){
+//     console.log(i, heroes[i], heroes[i].length);
+//     for (let j = 0; j < heroes[i].length; j ++)
+//     console.log(`j=${j}, ${heroes[i][j]}`)
+// }
+
+
+// let students = [
+//     ["aman", 95],
+//     ["sharada", 94],
+//     ['karan', 96]
+// ]
+
+// for(let i = 0; i< students.length; i++){
+//     console.log(`info of student # ${i+1}`)
+//     for (let j = 0; j<students[i].length; j++){
+//         console.log(students[i][j])
+//     }
+// }
+
+
+// **** for of loop for arrays
+
+// let fruits = ['apple', 'mango', 'banana', 'orange'];
+
+// for(fruit of fruits){
+//     console.log(fruit);
+// }
+
+
+//***for of loop for string
+
+// for(char of "apnacollege"){
+//     console.log(char)
+// }
+
+//******Nested for of loop */
+
+let heroes = [['ironman', 'spiderman', 'thor'], ['superman', 'batman', 'flash']]
+
+for (list of heroes){
+    // console.log(list)
+    for(hero of list){
+        console.log(hero);
+    }
+}
