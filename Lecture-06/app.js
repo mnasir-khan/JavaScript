@@ -168,13 +168,205 @@
 
 // practice Qs no 06
 
-let str = ['hi', 'hello', 'bye', '!'];
+// let str = ['hi', 'hello', 'bye', '!'];
 
-function concat(str){
-    let result = "";
+// function concat(str){
+//     let result = "";
 
-    for(let i=0; i<str.length; i++){
-        result+= str[i];
-    }
-    return result;
-}
+//     for(let i=0; i<str.length; i++){
+//         result+= str[i];
+//     }
+//     return result;
+// }
+
+// *********  Scope
+// finction scope
+
+
+// let sum = 50;
+
+// function calFun(a,b){
+//     let sum = a+b;
+//     console.log(sum);
+// }
+// calFun(2,4);
+
+// console.log(sum);
+
+// block scope
+
+// let blockScopr = 10;
+// var blockScopr = 10;
+// const blockScopr = 10;
+// {
+//     console.log(blockScopr);
+// }
+
+// {
+    // let blockScopr = 15;
+    // const blockScopr = 15;
+    // var blockScopr = 15;
+// }
+// console.log(blockScopr)
+
+
+// Lexical scope
+
+// function outerFunc(){
+//     let x = 10;
+//     let y = 15;
+//     function innerFunc(){
+//         console.log(x);
+//     }
+//     innerFunc();
+// }
+
+
+// function outerFunc(){
+//     let x = 10;
+//     let y = 15;
+//     function innerFunc(){
+//         let z = 20;
+//         console.log(x);
+//     }
+//     innerFunc();
+//     console.log(z);
+// }
+
+// Practice Qs
+
+// let greet = "hello";
+
+// function chanheGreet(){
+//     let greet = "hey";
+//     console.log(greet);
+//     function innerGreet(){
+//         console.log(greet);
+//     }
+//     innerGreet();
+// }
+
+// console.log(greet);
+// chanheGreet();
+
+
+// Functions expression
+
+// let sum = function(a,b){
+    // return a+b;
+    // console.log(a+b);
+// }
+
+    // sum(2,8);
+
+// console.log(sum());
+
+// let greet = function(){
+//     console.log("Hello");
+// }
+// greet();
+
+// console.log(greet());
+
+
+// Higher order functions
+
+// let greet = function(){
+//     console.log("hello");
+// }
+// greet();
+// greet();
+// greet();
+
+
+
+// function multipleGreet(func, count){
+//     for(let i=1;i<=count;i++){
+//         func();
+//     }
+// }
+// let greet = function(){
+//     console.log("hello");
+// }
+// multipleGreet(greet, 8);
+
+
+// Higher order functions (return)
+
+// let odd = function(n){
+//     console.log(!(n%2==0))
+// }
+
+// odd(2);
+// odd(5);
+
+// let even = function(n){
+//     console.log(n%2==0)
+// }
+// even(8);
+// even(9);
+
+
+// function oddEvenFsctroy(requiest){
+//     if(requiest == "odd"){
+//         let odd = function(n){
+//             console.log(!(n%2==0))
+//         }
+//         return odd;
+//     }else if (requiest== "even"){
+//         let even = function(n){
+//             console.log(n%2==0)
+//         }
+//         return even;
+//     }else{
+//         console.log("wrong requiest")
+//     }
+// }
+// // let requiest = "odd";
+// let requiest = "even";
+
+
+// Methods
+
+// const calculator = {
+//     add : function(a,b){
+//         return a+b;
+//     },
+//     sub : function(a, b){
+//         return a-b;
+//     },
+//     mul : function(a, b){
+//         return a*b;
+//     }  
+// };
+
+// mrthods shorthand
+
+const calculator = {
+    add(a,b){
+        return a+b;
+    },
+    sub(a, b){
+        return a-b;
+    },
+    mul(a, b){
+        return a*b;
+    }  
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
