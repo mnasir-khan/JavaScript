@@ -73,22 +73,22 @@
 // console.log(double);
 
 
-let students = [{
-    name : "aman",
-    marks : 95,
-},
-{
-    name : "imran",
-    marks : 94,
-}, 
-{
-    name: "umar",
-    marks : 90,
-}];
+// let students = [{
+//     name : "aman",
+//     marks : 95,
+// },
+// {
+//     name : "imran",
+//     marks : 94,
+// }, 
+// {
+//     name: "umar",
+//     marks : 90,
+// }];
 
-let gpa = students.map((el) =>{
-    return el.marks/10;
-});
+// let gpa = students.map((el) =>{
+//     return el.marks/10;
+// });
 
 // console.log(gpa);
 
@@ -140,9 +140,9 @@ let gpa = students.map((el) =>{
 
 // _______some Method_________
 
-let mixNum = [1, 2, 3, 4, 5];
-let evenNum = [ 2, 4, 6, 8];
-let oddNum = [1, 3, 5, 7];
+// let mixNum = [1, 2, 3, 4, 5];
+// let evenNum = [ 2, 4, 6, 8];
+// let oddNum = [1, 3, 5, 7];
 
 // let test = mixNum.some((el) => el % 2 == 0);
 // let test = mixNum.some((el) => el % 2 != 0);
@@ -150,12 +150,120 @@ let oddNum = [1, 3, 5, 7];
 // let test = oddNum.some((el) => el % 2 == 0);
 // let test = oddNum.some((el) => el % 2 != 0);
 
-console.log(test);
+// console.log(test);
 
 
 // __________reduce Method_______
 
-let num = [1, 2, 3, 4];
-let finalValue = num.reduce((res, el) => res+el);
 
-console.log(finalValue);
+// Method 1
+// let num = [1, 2, 3, 4];
+// let finalValue = num.reduce((res, el) => res + el);
+
+// console.log(finalValue);
+
+// Method 2
+// let num = [1, 2, 3, 4];
+// let finalValue = num.reduce((res, el) => {
+//   console.log(res);
+//   console.log(el);
+//   return res + el;
+// });
+
+// console.log(finalValue);
+
+// let num = [1, 2, 3, 4, 5, 6, 7, 8];
+// let finalValue = num.reduce((res, el) => {
+// //   console.log(res);
+// //   console.log(el);
+//   return res + el;
+// });
+
+// console.log(finalValue);
+
+
+
+// __________Maximum in Array_________________
+
+// With Loop
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// // let max = -1;
+// // let max = 0;
+// let max = "";
+
+// for(let i = 0; i < arr.length; i++) {
+//     if (max < arr[i]){
+//         max = arr[i];
+//     }
+// }
+// console.log(max);
+
+// with reduce function
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let ans = arr.reduce((max, el) =>{
+//     if (max < el){
+//         return el;
+//     }else{
+//         return max;
+//     }
+// });
+
+// console.log(ans);
+
+
+// _______ Practice Qs________
+// Q1
+
+// let nums = [10, 20, 30 ,40];
+// let ans = nums.every((el) => (el % 10 == 0));
+
+// console.log(ans); //true
+
+
+// let nums = [5, 10, 20, 30 ,40];
+// let ans = nums.every((el) => (el % 10 == 0));
+
+// console.log(ans); // false
+
+
+// Q2
+// let nums = [5, 10, 20, 30 ,40];
+
+// let min = nums.reduce((min, el) =>{
+//     if (min < el){
+//         return min;
+//     }else{
+//         return el;
+//     }
+// });
+
+// console.log(min);
+
+// in function
+
+// function getMin(nums){
+//     let min = nums.reduce((min, el) =>{
+//         if (min < el){
+//             return min;
+//         }else{
+//             return el;
+//         }
+//     });
+    
+//     return min;
+// };
+
+let nums = [5, 10, 20, 30 ,40];
+
+function getMin (){
+    let min = nums.reduce((min, el) => {
+ if(min < el){
+    return min;
+ }else{
+    return el;
+ }
+    });
+    return min;
+}
