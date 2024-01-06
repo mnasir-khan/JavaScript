@@ -90,12 +90,12 @@ let gpa = students.map((el) =>{
     return el.marks/10;
 });
 
-console.log(gpa);
+// console.log(gpa);
 
 
-// _______________filter_______________
+// _______________filter Method_______________
 
-let nums = [1, 2, 3, 4, 5, 6 ,7, 8, 9, 10, 12, 13, 14];
+// let nums = [1, 2, 3, 4, 5, 6 ,7, 8, 9, 10, 12, 13, 14];
 
 // let ans = nums.filter((el) => {
 //     return el % 2 == 0; // for even number
@@ -117,7 +117,45 @@ let nums = [1, 2, 3, 4, 5, 6 ,7, 8, 9, 10, 12, 13, 14];
 //     return el < 10;
 // });
 
-let ans = nums.filter((el) => {
-    return el <= 10;
-});
-console.log(ans);
+// let ans = nums.filter((el) => {
+//     return el <= 10;
+// });
+// console.log(ans);
+
+
+// ___________every Method_____________
+
+
+// let mixNum = [1, 2, 3, 4];
+// let evenNum = [6, 2, 8, 4];
+// let oddNum = [1, 3, 5, 7];
+
+// // let test = mixNum.every((el) => el %2 == 0);
+// // let test = evenNum.every((el) => el %2 == 0);
+// // let test = oddNum.every((el) => el %2 != 0);
+// let test = mixNum.every((el) => el %2 != 0);
+
+// console.log(test);
+
+
+// _______some Method_________
+
+let mixNum = [1, 2, 3, 4, 5];
+let evenNum = [ 2, 4, 6, 8];
+let oddNum = [1, 3, 5, 7];
+
+// let test = mixNum.some((el) => el % 2 == 0);
+// let test = mixNum.some((el) => el % 2 != 0);
+// let test = evenNum.some((el) => el % 2 == 0);
+// let test = oddNum.some((el) => el % 2 == 0);
+// let test = oddNum.some((el) => el % 2 != 0);
+
+console.log(test);
+
+
+// __________reduce Method_______
+
+let num = [1, 2, 3, 4];
+let finalValue = num.reduce((res, el) => res+el);
+
+console.log(finalValue);
