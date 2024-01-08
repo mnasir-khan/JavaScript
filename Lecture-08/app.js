@@ -360,3 +360,174 @@ let mix = [...odd, ...even];
 console.log(mix);
 
 
+// __________Spread with Objects Literals_________________
+
+const data = {
+   email : "mynameis@gmail.com",
+   password : "abcd",
+}
+
+const dataCopy = {...data, id : 123, country : "Pakistan"};
+
+console.log(data);
+console.log(dataCopy);
+
+
+// Array convert to object
+let arr = [1, 2, 3, 4, 5];
+
+let obj1 = {...arr};
+
+console.log(obj1)
+
+// String convert to object
+
+let obj2 = {..."hello"};
+
+console.log(obj2);
+
+
+//__________________Rest______________
+
+function sum(...args){
+   //Arguments
+   for(let i =0; i < args.length; i++){
+      console.log("You give us", args[i]);
+   }
+};
+
+console.log(sum(1, 2));
+console.log(sum(1, 2, 3, 4));
+
+// Inbuild Array in JavaScript
+
+// function min (a, b, c, d)
+function min ()
+{
+      console.log(arguments); // sary items ka collections arguments k andr aajata h
+}
+
+console.log(min(2, 3, 4, 5));
+console.log(min(2, 3, 4,));
+console.log(min(2, 3, 4,5, 6));
+
+
+// function sum(){
+//    return arguments.reduce((sum, el) => sum + el);
+// }
+
+// console.log(sum());
+// console.log(sum(1, 2, 3));
+
+// function sum(...args){
+//    return args.reduce((sum, el) => sum + el);
+// }
+
+// // console.log(sum());
+// console.log(sum(1, 2, 3));
+// console.log(sum(5, 10, 15, 20));
+
+
+// function sum(...args){
+//    return args.reduce((min, el) =>{
+//       if(min > el){
+//          return el;
+//       }else{
+//          return min;
+//       }
+//    });
+// }
+
+// console.log(sum(10, 9, 7, 6, 4));
+// console.log(sum(10, 9, 7, 6, 4, 0));
+
+
+function sum(msg, ...args){
+   console.log(msg)
+   return args.reduce((min, el) =>{
+      if(min > el){
+         return el;
+      }else{
+         return min;
+      }
+   });
+}
+
+console.log(sum("Hello", 1, 3, 9));
+
+
+
+//________Destructuring______
+
+
+// without destructuring
+
+// let names = ["rehman", "ali", "ahmed", "dost"];
+// let firstPosition = names[0];
+// let secondPosition = names[1];
+// let thirdPosition = names[2];
+// let fourthPosition = names[3];
+
+// console.log(firstPosition, secondPosition, thirdPosition, firstPosition);
+
+// with destructuring
+let names = ["rehman", "ali", "ahmed", "dost"];
+
+let [first, second, third, fourth] = names
+
+console.log(first);
+console.log(second);
+console.log(third);
+console.log(fourth);
+
+
+let namesof = ["rehman", "ali", "ahmed", "dost", 'imran', 'sadiq', 'shahid', 'dani'];
+
+// let [phla, dosra, tesra, baqi] = namesof
+let [phla, dosra, tesra, ...baqi] = namesof
+
+console.log(phla);
+console.log(dosra);
+console.log(tesra);
+console.log(baqi);
+
+//________Destructuring Objects______
+
+// without destruturing
+
+const stud = {
+   name : 'khan',
+   age : 15, 
+   class : 8,
+   subject : ["urdu", "english", "maths",'science', "SST"],
+   userName : "khan123",
+   password : "abcd"
+}
+
+// let username = stud.userName;
+// let password = stud.password;
+
+// console.log(username);
+// console.log(password);
+
+
+// with destruturing
+
+const studt = {
+   name : 'khan',
+   age : 15, 
+   class : 8,
+   subject : ["urdu", "english", "maths",'science', "SST"],
+   userName : "khan123",
+   password : "abcd"
+}
+
+// let {userName, password} = studt
+// let {userName : user, password :pass} = studt
+let {userName : user, password :pass, city = "karachi"} = studt
+
+// console.log(userName);
+// console.log(password);
+console.log(user);
+console.log(pass);
+console.log(city);
