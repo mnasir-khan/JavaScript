@@ -267,3 +267,96 @@ function getMin (){
     });
     return min;
 }
+
+
+// __________Default Parameter
+
+// function func (a, b = 5){
+//    return a + b;
+// }
+
+// console.log(func(4));
+// console.log(func(5));
+// console.log(func(5, 6));
+
+// function func (a = 5, b){
+//    return a + b;
+// }
+
+// console.log(func(5)); // 5 ki value "b" me jany k bajaye "a" me chali jaye gi or phr "a=5" or b ab b undefined hoga is lie Answer me Nan aye ga.. 
+
+// console.log(func(8, 5)); // 2 value deny se donu ki value update ho jaye gi
+
+// function func (a, b = 10, c = 15){
+//    return a + b + c ;
+// }
+
+// console.log(func(10));
+
+
+// function func (b = 10, c = 15, a){
+//    return a + b + c ;
+// }
+
+// console.log(func(10));
+
+
+// ________________Spread for Array____________
+
+// let num = (1, 2, 3, 4, 5, 0);
+
+// console.log(Math.min(num));
+
+
+// let num = (1, 2, 3, 4, 5, 0, -8);
+
+// console.log(Math.min(num));
+
+
+// Minimum value k liye 
+// let arr = [1, 2, 3, 4, 5, 6, 7, -8];
+
+// console.log(Math.min(arr[0], arr[2], arr[4])); // sab ko individual dalna pary ga tab ja k array btaye ga k konsi value sab se choti h.,
+
+// console.log(Math.min(...arr)); // spread method k zariye Array me ye easly kr sakty hn
+
+// Maximim value k liye
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, -8];
+
+// // console.log(Math.max(...arr));
+// console.log(arr);
+// console.log(...arr);
+
+// ________________Spread for String____________
+
+// let str = 'Nasir Khan';
+
+// console.log(...str);
+
+
+// __________Spread with Array Literals____________
+
+// let arr = [1, 2, 3, 4, 5];
+
+// let newArr = [...arr];
+
+// console.log(arr);
+// console.log(newArr);
+
+
+// __________Spread with String Literals_________________
+
+// let newStr = [...'hello'];
+
+// console.log(newStr);
+
+
+let odd = [1, 3, 5, 7, 9];
+let even = [2, 4, 6, 8, 10];
+
+let mix = [...odd, ...even];
+
+console.log(mix);
+
+
