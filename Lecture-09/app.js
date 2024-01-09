@@ -75,3 +75,109 @@ console.dir(qsa);
 let querySelcAll = document.querySelectorAll("p");
 
 console.log(querySelcAll);
+
+
+//______Using Properties and Methods_________
+
+// 1. innerText
+
+let q = document.querySelector("p");
+console.log(q);
+let qinnerTxt = q.innerText; 
+console.log(qinnerTxt); 
+
+// 2. innerHtml
+
+let qh = document.querySelector("p");
+console.log(qh);
+let qinnerTxth = q.innerHTML; 
+console.log(qinnerTxth);
+
+// 3. textContent
+
+let c = document.querySelector("p");
+console.log(c);
+let qinnerTxtc = q.textContent; 
+console.log(qinnerTxtc); 
+
+
+//___________Manipulating Attributes__________
+
+// getAttribute
+
+let getter = document.querySelector("span");
+// console.log(getter);
+
+let getter1 = getter.getAttribute('id');
+console.log(getter1);
+
+
+// setAttribure
+
+let setter = getter.setAttribute('id', 'folder');
+
+console.log(setter);
+
+
+// _________Manipulating Style______________
+
+let heading = document.querySelector('h1');
+
+let headingStyle = heading.style.color = 'red';
+
+let headingStylebg = heading.style.backgroundColor = 'yellow';
+
+console.log(heading);
+
+
+//______using classList_________
+
+
+let clasList = document.querySelector('span');
+
+let clasList1 = clasList.classList
+
+console.log(clasList1);
+
+
+// let heading2 = document.querySelector('h1');
+
+// let head = heading2.classList;
+
+// console.log(head);
+
+// for Adding class
+
+// let heading2 = document.querySelector('h1');
+
+// let head = heading2.classList.add('abcd');
+
+// let head1 = heading2.classList
+
+// console.log(head);
+// console.log(head1);
+
+// for removing
+
+// contains
+
+// let heading2 = document.querySelector('h1');
+
+// let head = heading2.classList.contains('ab');
+
+// let head1 = heading2.classList
+
+// console.log(head1);
+// console.log(head);
+
+// toggle ==> switch
+
+let heading2 = document.querySelector('h1');
+
+// let head = heading2.classList.toggle('abcd');
+let head = heading2.classList.toggle('xyz');
+
+let head1 = heading2.classList
+
+console.log(head1);
+console.log(head);
