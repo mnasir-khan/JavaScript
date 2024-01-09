@@ -25,12 +25,12 @@ console.log(document.all[6].innerHTML = "DOM Manipulation");
 //_________getElementbyId________
 
 // let get = document.getElementById(Para);
-let get = document.getElementById('Para');
+// let get = document.getElementById('Para');
 
-console.log(get);
-console.dir(get);
-console.dir(get.id);
-console.dir(get.tagName);
+// console.log(get);
+// console.dir(get);
+// console.dir(get.id);
+// console.dir(get.tagName);
 
 
 // ________getElementByClass____________
@@ -42,102 +42,102 @@ console.log(divClass);
 
 // ________getElementByTagName__________
 
-let getTag = document.getElementsByTagName("p");
+// let getTag = document.getElementsByTagName("p");
 
-console.log(getTag)
-console.log(getTag[1]);
-console.log(getTag[1].innerHTML = "abcd");
-console.log(getTag[2].innerText = "efgh");
+// console.log(getTag)
+// console.log(getTag[1]);
+// console.log(getTag[1].innerHTML = "abcd");
+// console.log(getTag[2].innerText = "efgh");
 
 
 //_______Query Selectors__________
 
-let querySelc = document.querySelector("p");
+// let querySelc = document.querySelector("p");
 // let querySelc = document.querySelector("h1");
 
-console.log(querySelc);
-console.dir(querySelc);
+// console.log(querySelc);
+// console.dir(querySelc);
 
-let qs = document.querySelector("div p");
+// let qs = document.querySelector("div p");
 
-console.log(qs);
-console.dir(qs);
-
-
-//_______Query Selectors all__________
-
-let qsa = document.querySelectorAll("div");
-
-console.log(qsa);
-console.dir(qsa);
+// console.log(qs);
+// console.dir(qs);
 
 
-let querySelcAll = document.querySelectorAll("p");
+// //_______Query Selectors all__________
 
-console.log(querySelcAll);
+// let qsa = document.querySelectorAll("div");
 
-
-//______Using Properties and Methods_________
-
-// 1. innerText
-
-let q = document.querySelector("p");
-console.log(q);
-let qinnerTxt = q.innerText; 
-console.log(qinnerTxt); 
-
-// 2. innerHtml
-
-let qh = document.querySelector("p");
-console.log(qh);
-let qinnerTxth = q.innerHTML; 
-console.log(qinnerTxth);
-
-// 3. textContent
-
-let c = document.querySelector("p");
-console.log(c);
-let qinnerTxtc = q.textContent; 
-console.log(qinnerTxtc); 
+// console.log(qsa);
+// console.dir(qsa);
 
 
-//___________Manipulating Attributes__________
+// let querySelcAll = document.querySelectorAll("p");
 
-// getAttribute
-
-let getter = document.querySelector("span");
-// console.log(getter);
-
-let getter1 = getter.getAttribute('id');
-console.log(getter1);
+// console.log(querySelcAll);
 
 
-// setAttribure
+// //______Using Properties and Methods_________
 
-let setter = getter.setAttribute('id', 'folder');
+// // 1. innerText
 
-console.log(setter);
+// let q = document.querySelector("p");
+// console.log(q);
+// let qinnerTxt = q.innerText; 
+// console.log(qinnerTxt); 
+
+// // 2. innerHtml
+
+// let qh = document.querySelector("p");
+// console.log(qh);
+// let qinnerTxth = q.innerHTML; 
+// console.log(qinnerTxth);
+
+// // 3. textContent
+
+// let c = document.querySelector("p");
+// console.log(c);
+// let qinnerTxtc = q.textContent; 
+// console.log(qinnerTxtc); 
 
 
-// _________Manipulating Style______________
+// //___________Manipulating Attributes__________
 
-let heading = document.querySelector('h1');
+// // getAttribute
 
-let headingStyle = heading.style.color = 'red';
+// let getter = document.querySelector("span");
+// // console.log(getter);
 
-let headingStylebg = heading.style.backgroundColor = 'yellow';
-
-console.log(heading);
-
-
-//______using classList_________
+// let getter1 = getter.getAttribute('id');
+// console.log(getter1);
 
 
-let clasList = document.querySelector('span');
+// // setAttribure
 
-let clasList1 = clasList.classList
+// let setter = getter.setAttribute('id', 'folder');
 
-console.log(clasList1);
+// console.log(setter);
+
+
+// // _________Manipulating Style______________
+
+// let heading = document.querySelector('h1');
+
+// let headingStyle = heading.style.color = 'red';
+
+// let headingStylebg = heading.style.backgroundColor = 'yellow';
+
+// console.log(heading);
+
+
+// //______using classList_________
+
+
+// let clasList = document.querySelector('span');
+
+// let clasList1 = clasList.classList
+
+// console.log(clasList1);
 
 
 // let heading2 = document.querySelector('h1');
@@ -172,12 +172,132 @@ console.log(clasList1);
 
 // toggle ==> switch
 
-let heading2 = document.querySelector('h1');
+// let heading2 = document.querySelector('h1');
 
-// let head = heading2.classList.toggle('abcd');
-let head = heading2.classList.toggle('xyz');
+// // let head = heading2.classList.toggle('abcd');
+// let head = heading2.classList.toggle('xyz');
 
-let head1 = heading2.classList
+// let head1 = heading2.classList
 
-console.log(head1);
-console.log(head);
+// console.log(head1);
+// console.log(head);
+
+
+//_______________Navigation___________
+
+// parentElement
+
+// let h2 = document.querySelector('h2');
+
+// let h2kabap = h2.parentElement;
+
+// console.log(h2kabap);
+// console.log(h2);
+
+// children
+
+// let h2 = document.querySelector('h2');
+
+// let h2kabap = h2.children;
+
+// console.log(h2kabap);
+// console.log(h2);
+
+// let bap = document.querySelector('div');
+
+// let bapkbachy = bap.children;
+
+// console.log(bapkbachy);
+
+// child count
+
+// let bap = document.querySelector('div');
+
+// let bapkbachy = bap.childElementCount;
+
+// console.log(bapkbachy);
+
+
+//previousElementSibling
+
+// let bhai = document.querySelector("p");
+
+// let bigbro = bhai.previousElementSibling;
+
+// console.log(bigbro);
+
+
+//nextElementSibling
+
+// let bhai = document.querySelector("h2");
+
+// let bigbro = bhai.nextElementSibling;
+
+// console.log(bigbro);
+
+
+// __________________Adding Element______________
+
+// creatElement
+
+// let newP = document.createElement("p");
+// console.log(newP);
+
+// newP.innerText = "Hi.. I am new Para";
+// console.log(newP);
+// console.dir(newP);
+
+
+// for insertind new element
+
+// appendChild
+
+// let body = document.querySelector('body');
+
+// body.appendChild(newP);
+
+// console.log(body);
+
+// let div = document.querySelector('div');
+
+// div.appendChild(newP);
+
+// // // console.log(div);
+
+// div.append("recently i am created");
+
+// console.log(div);
+
+
+// _______Removing Element_______
+
+// div.removeChild('p');
+
+// console.log(div);
+
+// p.remove();
+// div.remove();
+
+// body.remove();
+
+
+// ______Practice Qs____________
+
+let para1 = document.createElement('p');
+para1.innerText = "hey this is red";
+document.querySelector("body").appendChild(para1);
+
+
+let div = document.createElement('div');
+let h1 = document.createElement('h1');
+let para2 = document.createElement('p');
+
+h1.innerText = "I am in a div";
+para2.innerText = "me too";
+
+div.append(h1);
+div.append(para2);
+
+document.querySelector("body").appendChild(div);
+document.querySelector("body").append(div);
+document.querySelector("body").prepend(div);
