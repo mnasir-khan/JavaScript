@@ -1,3 +1,19 @@
 *{
     background-color: rgb(167, 250, 222);
 }
+/* body {
+    text-align: center;
+}
+div {
+    height: 200px;
+    width: 500px;
+    border: 1px solid black;
+    margin: auto;
+} */
+
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    border: 1px solid red;
+}
