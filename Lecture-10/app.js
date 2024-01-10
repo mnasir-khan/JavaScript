@@ -223,20 +223,164 @@
 
 //Short Method
 
-let btn = document.querySelector("button");
-let p = document.querySelector("p");
-let h2 = document.querySelector("h2");
-let h4 = document.querySelector("h4");
+// let btn = document.querySelector("button");
+// let p = document.querySelector("p");
+// let h2 = document.querySelector("h2");
+// let h4 = document.querySelector("h4");
 
-function changeColor(){
-    console.dir(this.innerText);
-    this.style.backgroundColor = "blue"
-}
+// function changeColor(){
+//     console.dir(this.innerText);
+//     this.style.backgroundColor = "blue"
+// }
 
-btn.addEventListener('click', changeColor);
+// btn.addEventListener('click', changeColor);
 
-p.addEventListener('click', changeColor);
+// p.addEventListener('click', changeColor);
 
-h2.addEventListener('click', changeColor);
+// h2.addEventListener('click', changeColor);
 
-h4.addEventListener('click', changeColor);
+// h4.addEventListener('click', changeColor);
+
+
+//____________Keyboard Events___________________
+
+// let btn = document.querySelector("button");
+
+// // btn.addEventListener("click", function(e){
+// //     console.log(e);
+// //     console.log("button clicked")
+// // })
+
+// btn.addEventListener("dblclick", function(e){
+//     console.log(e);
+//     console.log("button clicked")
+// })
+
+// let input = document.querySelector("input");
+
+// input.addEventListener("keypress", function(){
+    //     console.log("key was pressed")
+    // // })
+    
+    // input.addEventListener("keydown", function(Event){
+        //     console.log("key was pressed");
+        //     console.log(Event)
+        // })
+        
+        // input.addEventListener("keyup", function(){
+            //     console.log("key was released")
+            // })
+
+
+//     let input = document.querySelector("input");
+            
+//     input.addEventListener("keydown", function(Event){
+//     console.log("code = ", Event.code); // ArrowUp, ArrowDown, ArroeRight, ArrowLeft
+//     if(Event.code == 'ArrowUp'){
+//         console.log("character move forward")
+//     }else if (Event.code == 'ArrowDown'){
+//         console.log("character move backward")
+//     }else if (Event.code == 'ArrowRight'){
+//         console.log("character move right")
+//     }else if (Event.code =='ArrowLeft'){
+//         console.log("character move Left")
+//     }
+// })
+
+
+//____________________form events_________________
+
+// let form = document.querySelector("form");
+
+// form.addEventListener("submit", function(e){
+//     e.preventDefault();
+//     alert("form submited")
+// })
+
+//_________________Form Extracting_________
+
+// let form = document.querySelector("form");
+
+// form.addEventListener("submit", function(e){
+//     e.preventDefault();
+    
+//     let inp = document.querySelector("input");
+//     // console.log(inp)
+//     console.dir(inp);
+//     console.log(inp.value);
+// })
+
+
+// let form = document.querySelector("form");
+
+// form.addEventListener("submit", function(e){
+//     e.preventDefault();
+    
+//     let user = document.querySelector("#user");
+//     let pass = document.querySelector("#pass");
+//     // console.log(inp)
+//     // console.dir(user);
+//     // console.dir(pass);
+//     console.log(user.value);
+//     console.log(pass.value);
+
+//     alert(`Hi ${user.value}, your Password is ${pass.value}`)
+// })
+
+// let form = document.querySelector("form");
+
+// form.addEventListener("submit", function(e){
+//     e.preventDefault();
+//     console.dir(form);
+    
+//     let user =this.elements[0]; // form.elements[0];
+//     let pass = this.elements[1];
+
+//     console.log(user.value);
+//     console.log(pass.value);
+
+//     alert(`Hi ${user.value}, your Password is ${pass.value}`)
+// })
+
+
+// ______________Change Event_______________
+
+    // let form = document.querySelector("form");
+
+    // form.addEventListener("submit", function(e){
+    // e.preventDefault();
+    // })   
+    // let user = document.querySelector('#user');
+
+    // user.addEventListener("change", function(){
+    //     console.log("Change event");
+    //     console.log("final value = ",  this.value)
+    // });
+
+    // user.addEventListener("input", function(){
+    //     console.log("input event");
+    //     console.log("final value = ",  this.value)
+    // });
+
+
+    //___________Activity_______________
+
+
+    let inp = document.querySelector("#text");
+
+    let p = document.querySelector("p");
+
+    inp.addEventListener("input", function(){
+        console.log(inp.value);
+        p.innerText = inp.value;
+    })
+
+
+
+
+
+
+
+
+
+
