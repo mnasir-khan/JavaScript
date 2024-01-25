@@ -19,6 +19,7 @@ li{
 
 body{
     text-align: center;
+    /* background-image: linear-gradient(pink, purple); */
 }
 
 .btn {
@@ -26,7 +27,7 @@ body{
     width: 200px;
     border-radius: 20%;
     border: 10px solid black;
-    margin:2.5rem;
+    margin:2rem;
 }
 
 .btn-container{
@@ -57,3 +58,6 @@ body{
 .userFlash{
     background-color: green;
 }
+
+
+/* ____________________________________________________________________________________ */

@@ -108,12 +108,17 @@ function checkAns(idx){
     setTimeout(levelUp, 1000)
     }
     } else {
-    h2.innerText = `Game over! Press any key to start.`; 
+    h2.innerHTML = `Game over..! Your score was <b> ${level} </b> <br> Press any key to start.`;
+    document.querySelector("body").style.backgroundColor = "red";
+    setTimeout(function(){
+        document.querySelector("body").style.backgroundColor = "white";
+    }, 150) 
+    reset();
     }
 }
 
 function btnPress (){
-    console.log(this)
+    // console.log(this)
     let btn = this;
     userFlash(btn);
 
@@ -127,4 +132,11 @@ function btnPress (){
 let allBtns = document.querySelectorAll(".btn");
 for(btn of allBtns){
     btn.addEventListener("click", btnPress);
+};
+
+function reset (){
+    started = false;
+    gameSeq = [];
+    userSeq = [];
+    level = 0;
 }
