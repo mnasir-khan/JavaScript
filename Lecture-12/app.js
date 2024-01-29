@@ -15,7 +15,6 @@
 
 // console.log("done, Bye")
 
-
 //__________________Visulizing the Call Stack___________________________________
 
 // function one (){
@@ -48,7 +47,6 @@
 // }
 // three();
 
-
 //_____________________JS is Single Threaded___________________________________
 
 // let a = 10;
@@ -59,8 +57,6 @@
 
 // let sum = a+b;
 // console.log("sum", sum);
-
-
 
 // setTimeout(()=>{
 //     console.log("Muhammad Nasir Khan");
@@ -78,8 +74,6 @@
 
 // console.log("Hello....")
 
-
-
 //_____________________Callback Hell___________________________________
 
 // h2 = document.querySelector("h2");
@@ -95,8 +89,6 @@
 // setTimeout(()=>{
 //     h2.style.color = "green";
 // },3000);
-
-
 
 //_____________________Callback Hell (Nesting callbacks)___________________________________
 
@@ -121,7 +113,6 @@
 // changeColor("orange", 2000);
 // changeColor("green", 3000);
 
-
 //_____________________Promises________________________________-
 
 // function savetoDb (data){
@@ -134,50 +125,99 @@
 // }
 // savetoDb("Nasir Hun yar")
 
+// function savetoDb(data, success, failure) {
+//   let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//   if (internetSpeed > 4) {
+//     success();
+//   } else {
+//     failure();
+//   }
+// }
 
-function savetoDb (data, success, failure){
- let internetSpeed = Math.floor(Math.random() * 10) + 1;
- if (internetSpeed > 4){
-    success();
- }else{
-    failure();
- }
+// savetoDb(
+//   "Nasir Khan",
+//   () => {
+//     console.log("Success : Your Data was saved : ");
+//     savetoDb(
+//       "hello world",
+//       () => {
+//         console.log("Success2 : Data2 saved");
+//         savetoDb(
+//           "khan",
+//           () => {
+//             console.log("Success3 : data3 saved");
+//           },
+//           () => {
+//             console.log("failure3 : weak connection");
+//           }
+//         );
+//       },
+//       () => {
+//         console.log("Failure2 : Weak connection");
+//       }
+//     );
+//   },
+//   () => {
+//     console.log("Failure : Weak connection : Data not saved!");
+//   }
+// );
+
+// function savetoDb (){
+//     return new Promise ((success, failure) =>{
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if(internetSpeed > 4){
+//             success("success : data was saved");
+//         }else{
+//             failure("failure : weak connections");
+//         };
+//     });
+// };
+
+// function savetoDb (){
+//     return new Promise ((resolve, reject) =>{
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if(internetSpeed > 4){
+//             resolve("success : data was saved");
+//         }else{
+//             reject("failure : weak connections");
+//         };
+//     });
+// };
+
+//____________________.then() & .catch()__________________
+
+function savetoDb() {
+  return new Promise((resolve, reject) => {
+    let internetSpeed = Math.floor(Math.random() * 10) + 1;
+    if (internetSpeed > 4) {
+      resolve("success : data was saved");
+    } else {
+      reject("failure : weak connections");
+    }
+  });
 }
 
-savetoDb(
-    "Nasir Khan",
-    () => {
-        console.log("Success : Your Data was saved : ");
-        savetoDb(
-            "hello world",
-            () =>{
-                console.log("Success2 : Data2 saved");
-                savetoDb(
-                    "khan",
-                    () =>
-                    {
-                        console.log('Success3 : data3 saved');
-                    },
-                    () =>{
-                        console.log("failure3 : weak connection");
-                    }
-                )
-            },
-            () =>{
-                console.log("Failure2 : Weak connection");
-            }
-        )
-    },
-     ()=>{
-        console.log("Failure : Weak connection : Data not saved!");
-    })
+// Detailed Method
+
+// let request = savetoDb("apnaname"); // req = promise object
+// request
+//   .then(() => {
+//     console.log("Promise was resolved");
+//     console.log(request);
+//   })
+//   .catch(() => {
+//     console.log("Promise was rejected");
+//     console.log(request);
+//   });
 
 
+// Short Method
 
-
-
-
-
-
-
+savetoDb("apnaname") 
+  .then(() => {
+    console.log("Promise was resolved");
+  })
+  .catch(() => {
+    console.log("Promise was rejected");
+  });
 //
