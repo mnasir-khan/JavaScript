@@ -186,16 +186,16 @@
 
 //____________________.then() & .catch()__________________
 
-function savetoDb() {
-  return new Promise((resolve, reject) => {
-    let internetSpeed = Math.floor(Math.random() * 10) + 1;
-    if (internetSpeed > 4) {
-      resolve("success : data was saved");
-    } else {
-      reject("failure : weak connections");
-    }
-  });
-}
+// function savetoDb() {
+//   return new Promise((resolve, reject) => {
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//     if (internetSpeed > 4) {
+//       resolve("success : data was saved");
+//     } else {
+//       reject("failure : weak connections");
+//     }
+//   });
+// }
 
 // Detailed Method
 
@@ -210,14 +210,129 @@ function savetoDb() {
 //     console.log(request);
 //   });
 
-
 // Short Method
 
-savetoDb("apnaname") 
-  .then(() => {
-    console.log("Promise was resolved");
-  })
-  .catch(() => {
-    console.log("Promise was rejected");
+// savetoDb("apnaname")
+//   .then(() => {
+//     console.log("Promise was resolved");
+//   })
+//   .catch(() => {
+//     console.log("Promise was rejected");
+//   });
+
+//______________________Promises chaining____________________
+
+// function savetoDb() {
+//   return new Promise((resolve, reject) => {
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//     if (internetSpeed > 4) {
+//       resolve("success : data was saved");
+//     } else {
+//       reject("failure : weak connections");
+//     }
+//   });
+// }
+
+// savetoDb("apnaname")
+//   .then(() => {
+//     console.log("data 1 saved. ");
+//     return savetoDb("hello world").then(() => {
+//       console.log("data 2 saved");
+//     });
+//   })
+//   .catch(() => {
+//     console.log("Promise was rejected");
+//   });
+
+// Improved version
+
+// savetoDb("apnaname")
+//   .then(() => {
+//     console.log("data 1 saved. ");
+//     return savetoDb("hello world");
+//   })
+//   .then(() => {
+//     console.log("data 2 saved");
+//     return savetoDb("nasirkhan");
+//   })
+//   .then(() => {
+//     console.log("data 3 saved");
+//   })
+//   .catch(() => {
+//     console.log("Promise was rejected");
+//   });
+
+//__________________________Results and errors in Promises______________
+
+//   function savetoDb() {
+//     return new Promise((resolve, reject) => {
+//       let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//       if (internetSpeed > 4) {
+//         resolve("success : data was saved");
+//       } else {
+//         reject("failure : weak connections");
+//       }
+//     });
+//   }
+
+//   savetoDb("apnaname")
+//   .then((result) => {
+//     console.log("data 1 saved. ");
+//     console.log("result : ", result)
+//     return savetoDb("hello world");
+//   })
+//   .then((result) => {
+//     console.log("data 2 saved");
+//     console.log("result : ", result);
+//     return savetoDb("nasirkhan");
+//   })
+//   .then((request) => {
+//     console.log("data 3 saved");
+//     console.log("result : ", result);
+//   })
+//   .catch((error) => {
+//     console.log("Promise was rejected");
+//     console.log("error : ", error);
+//   });
+
+//____________________________Refactoring old code_____________________________
+
+h2 = document.querySelector("h2");
+
+function changeColor(color, delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      h2.style.color = color;
+      resolve("color changed");
+    }, delay);
   });
+}
+
+changeColor("red", 1000)
+.then(() => {
+  console.log("red color was completed");
+  return changeColor("orange", 1000);
+})
+.then(() => {
+    console.log("orange color was completed");
+    return changeColor("green", 1000);
+  })
+  .then(() => {
+    console.log("green color was completed");
+    return changeColor("blue", 1000);
+  })
+  .then(() => {
+    console.log("blue color was completed");
+  })
+
+// changeColor("red", 1000, ()=>{
+//     changeColor("orange", 1000, ()=>{
+//         changeColor("green", 1000, ()=>{
+//             changeColor("yellow", 1000, ()=>{
+//                 changeColor("Blue", 1000)
+//             })
+//         })
+//     });
+// });
+
 //
