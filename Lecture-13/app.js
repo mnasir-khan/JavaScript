@@ -136,26 +136,130 @@
 
 // ___________________Accessing JSON data_____________________
 
-let jsonRes =
-  '{"fact":"A female cat can be referred to as a molly or a queen, and a male cat is often labeled as a tom.","length":96}';
+// let jsonRes =
+//   '{"fact":"A female cat can be referred to as a molly or a queen, and a male cat is often labeled as a tom.","length":96}';
 
 // console.log(jsonRes);
 
 // Method 01 ==>  (JSON.parse)
 
-let validRes = JSON.parse(jsonRes);
+// let validRes = JSON.parse(jsonRes);
 
-console.log(validRes);
-console.log(validRes.fact);
+// console.log(validRes);
+// console.log(validRes.fact);
 
 // Method 02 ==>  (JSON.sringify)
 
-let student = {
-  name: "nasir",
-  marks: 90,
-  age: 25,
-};
+// let student = {
+//   name: "nasir",
+//   marks: 90,
+//   age: 25,
+// };
 
-console.log(JSON.stringify(student));
+// console.log(JSON.stringify(student));
+
+//________________________Our first request_______________________
+
+// let url = "https://catfact.ninja/fact" // Ok API
+
+// fetch(url)
+// .then((res)=>{
+//   console.log(res)
+// })
+// .catch((err)=>{
+//   console.log("Error -" , err)
+// })
+
+// let url = "https://catfact.ninja/fact2" // if wrong API
+
+// fetch(url)
+// .then((res)=>{
+//   console.log(res)
+// })
+// .catch((err)=>{
+//   console.log("Error -" , err)
+// })
+
+// let url = "https://catfact.ninja/fact" // for Readble data we use JSON
+
+// fetch(url)
+// .then((res)=>{
+//   console.log(res)
+//   console.log(res.json())
+// })
+// .catch((err)=>{
+//   console.log("Error -" , err)
+// })
+
+// let url = "https://catfact.ninja/fact"; // for Readble data we use JSON (with .then method)
+
+// fetch(url)
+//   .then((res) => {
+//     console.log(res);
+//     res.json().then((data) => {
+//       console.log(data);
+//     });
+//   })
+//   .catch((err) => {
+//     console.log("Error -", err);
+//   });
+
+// //____________________For Single Data______________________________
+
+// let url = "https://catfact.ninja/fact"; // for Readble data we use JSON (return .then method)
+
+// fetch(url)
+//   .then((res) => {
+//     console.log(res);
+//     return res.json();
+//   })
+//   .then((data) => {
+//     console.log(data.fact);
+//   })
+//   .catch((err) => {
+//     console.log("Error -", err);
+//   });
+
+
+//____________________For multiple Data______________________________
+
+// let url = "https://www.boredapi.com/api/activity"; // for Readble data we use JSON (return .then method)
+// let url = "https://catfact.ninja/fact"; // for Readble data we use JSON (return .then method)
+
+// fetch(url)
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((data) => {
+//     console.log("data1 = ", data.fact);
+//     return fetch(url);
+//   })
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((data2) => {
+//     console.log("data2 = ", data2.fact)
+//   })
+//   .catch((err) => {
+//     console.log("Error -", err);
+//   });
+
+//   console.log("Nasir")
+
+//____________________________using fetch with async & await__________________
+
+
+let url = "https://catfact.ninja/fact2";
+
+async function getFacts(){
+  try {
+    let res = await fetch(url);
+    let data = await res.json();
+    console.log(data.fact)
+  } catch (error) {
+    console.log("Error ", error)
+  }
+console.log("bye")
+}
 
 //
